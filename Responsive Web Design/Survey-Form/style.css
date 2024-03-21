@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-color: #0008;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #292f33;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.main-wrapper {
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.header-wrapper {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+    line-height: 2.5rem;
+    font-weight: 550;
+}
+
+.survey-form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.form-item {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-item > p, label {
+    display: block;
+}
+
+.form-item input, select, textarea {
+    border-radius: 10px;
+    border: 1px solid #292f33;
+    width: 100%;
+    padding: 0.25rem;
+    font-size: inherit;
+    font-family: inherit;
+    color: #292f33;
+    resize: none;
+}
+
+.form-item input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.form-item input[type="radio"]:before  {
+    position: absolute;
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+}
+
+.form-item input[type="radio"]:focus-visible:before {
+    outline-style: auto;
+}
+
+@supports not selector(:focus-visible) {
+    .form-item input[type="radio"]:focus:before {
+        outline-style: auto;
+    }
+  }
+
+.form-item input[type="checkbox"]:focus {
+    outline-offset: 0;
+}
+
+.form-item input[type="radio"], input[type="checkbox"] {
+    height: 0.9rem;
+    width: 0.9rem;
+    accent-color: rgb(12 74 110);
+}
+
+.item-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-wrapper {
+    margin-bottom: 0.5rem;
+}
+
+.submit-button {
+    transition: background-color 0.5s ease;
+    background-color: rgb(243 244 246);
+}
+
+.submit-button:hover {
+    transition: background-color 0.5s ease;
+    background-color: rgb(229 231 235);
+    cursor:pointer;
+}
+
+@media (min-width: 1024px) {
+   html {
+      font-size: 1.5rem;
+       line-height: 2rem;
+   }
+}

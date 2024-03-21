@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Work+Sans:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  /*Debugging */
+  /*outline: 1px solid red; */
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply m-0 p-0 font-Poppins text-lg font-medium tracking-wide text-slate-600 md:text-xl;
+}
+
+h1,
+h2 {
+  @apply text-blue-900;
+}
+
+h1 {
+  @apply mb-8 text-5xl font-black md:text-6xl;
+}
+
+h2 {
+  @apply mb-6 text-3xl font-bold md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl text-blue-900 md:text-3xl;
+}
+
+p {
+  @apply mb-16;
+}
+
+nav a {
+  @apply font-medium hover:text-blue-700;
+}
+
+img {
+  @apply inline-block h-auto w-full;
+}
+
+input,
+textarea,
+button {
+  @apply rounded-lg p-3;
+}
+/*
+.mask-img {
+  -webkit-mask-image: linear-gradient(black, black, black 70%, transparent);
+  mask-image: linear-gradient(black, black, black 70%, transparent);
+}
+*/
+.tools-container {
+  @apply flex h-[9rem] w-[9rem] flex-col items-center justify-end rounded-lg border border-gray-200 p-4 text-lg shadow-md;
+}
+
+.tools-logo {
+  @apply max-h-[3rem] w-fit w-fit max-w-[3rem];
+}
+
+.tools-label {
+  @apply mt-3 text-base font-semibold;
+}
+
+.tools-checkbox[aria-checked="true"] {
+  @apply mt-1 h-6 w-6 rounded border-2 border-[rgb(33,150,83)] 
+  bg-[rgb(33,150,83)]/[0.17] bg-[url(./img/tools/checkmark-cropped.svg)] bg-[length:0.8rem] bg-center bg-no-repeat;
+}
+
+.tools-checkbox[aria-checked="false"] {
+  @apply mt-1 h-6 w-6 rounded border-2 border-slate-600;
+}
+
+.tools-checkmark {
+  @apply m-auto h-full w-full max-w-[0.8rem];
+}
+
+.project-tile > a {
+  @apply rounded-2xl;
+}
+
+.project-tile > h3 {
+  @apply !mb-0;
+}
+
+.project-tools {
+  @apply h-full max-h-logos_projects w-auto select-none;
+}
+
+.project-img-container {
+  @apply relative z-30 mb-2 rounded-2xl
+  shadow-md after:absolute after:top-0 after:left-0 after:h-full 
+  after:w-full after:rounded-2xl after:border after:transition
+  after:duration-500 after:group-hover:bg-gray-900/40 after:group-focus-visible:bg-gray-900/40;
+}
+
+.project-img-container > p {
+  @apply !mb-0;
+}
+
+.project-img-text {
+  @apply invisible absolute top-1/2 left-1/2 z-20 -translate-x-1/2 
+ -translate-y-1/2 text-center text-white opacity-0 transition-all 
+ duration-500 group-hover:visible group-hover:opacity-100 
+ group-focus:visible group-focus:opacity-100;
+}

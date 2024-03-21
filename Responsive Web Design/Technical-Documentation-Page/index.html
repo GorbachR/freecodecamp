@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="author" content="Raphael Gorbach" />
+    <meta name="description" content="Fourth Project of the FreeCodeCamp Course 'Responsive Web Design'">
+    <meta name="keywords" content="technical documentation page, bootstrap, freecodecamp">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/bootstrap-5-1.svg" type="image/x-icon">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-lg-nowrap gx-4">
+            <div class="col-lg position-sticky top-0 bg-white shadow-sm" style="max-height: 100vh;">
+                <nav class="navbar navbar-light flex-column align-items-start align-items-lg-center" id="navbar">
+                    <div class="navbar-content">
+                        <div class="d-flex align-items-center navbar-brand me-0">
+                            <img class="d-inline-block" src="./img/bootstrap-5-1.svg" alt="Test" width="50">
+                            <header class="navbar-brand h1 d-inline-block text-wrap mb-0 py-0 ms-2 me-0"
+                                >Bootstrap Cheatsheet</header>
+                        </div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Installation">Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Layout">Layout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Content">Content</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Components">Components</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Utilities">Utilities</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-10 px-lg-4">
+                <main id="main-doc">
+                    <section class="main-section" id="Installation">
+                        <header class="h2 display-5 mt-3 mt-lg-2">Installation</header>
+                        <h3>Npm package manager</h3>
+                        <p>
+                            The most common way to install bootstrap is to use a package manager
+                            like npm to download the source code and its dependencies. Simply run
+                            the following command after you have initialized npm:
+                        </p>
+                        <div class="command-line"> npm install bootstrap </div>
+                        <p>
+                            To then start using bootstrap you need to load bootstrap into your HTML
+                            file. Copy the following link tag into the head of your HTML file:
+                        </p>
+                        <div class="code-highlight">
+                            <code>
+                                &lt;link rel="stylesheet"
+                                href="./node_modules/bootstrap/dist/css/bootstrap.min.css" /&gt;
+                            </code>
+                        </div>
+                        <p>
+                            Bootstrap requires dependencies like Popper, jquery and its own
+                            JavaScript plugin for some features to function properly. To load
+                            them include this at the end of your body:
+                        </p>
+                        <div class="code-highlight">
+                            <code>
+                            &lt;script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"&gt;&lt;/script&gt;
+                            </code>
+                        </div>
+                        <h3>CDN installation</h3>
+                        <p>The easiest way to get started with bootstrap is to use the CDN installation.
+                            Simply copy the following into the head of your HTML:</p>
+                        <div class="code-highlight">
+                            <code>
+                                &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+                                rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"&gt;
+                            </code>
+                        </div>
+                        <p>Also copy this at the bottom of your body for JavaScript functionality:</p>
+                        <div class="code-highlight">
+                            <code>
+                                &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"&gt;&lt;/script&gt;
+                            </code>
+                        </div>
+                        <p>If you want to install Popper seperately from Boostrap's compiled JavaScript include the following <code>&lt;script&gt;</code> tags:</p>
+                        <div class="code-highlight">
+                            <code>
+                                <span class="d-block mb-3">
+                                    &lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"&gt;&lt;/script&gt;
+                                </span>
+                                <span> 
+                                    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"&gt;&lt;/script&gt;
+                                </span>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="main-section" id="Layout">
+                        <header class="h2 display-5">Layout</header>
+                        <h3>Containers</h3>
+                        <p>Containers are the most basic layout element required to use the bootstrap grid system. To
+                            start
+                            using
+                            them you have three options to choose from:
+                        </p>
+                        <ul>
+                            <li><code>.container</code> with which you can set a <code>max-width</code> at each
+                                responsive
+                                breakpoint</li>
+                            <li><code>.container-fluid</code> which uses <code>width: 100%</code> at every breakpoint
+                            </li>
+                            <li><code>.container-(breakpoint)</code> with which you set the <code>width: 100%</code>
+                                until a
+                                specific breakpoint</li>
+                        </ul>
+                        <h3>Responsive Breakpoints</h3>
+                        <p>Bootstrap uses multiple media queries to properly scale up the elements and ensure a
+                            responsive
+                            layout.
+                            Since bootstrap is mobile first the standard viewport width is up to 575px.</p>
+                        <div class="code-highlight">
+                            <pre><code>
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up, shorthand: sm)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up, shorthand: md)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up, shorthand: lg)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up, shorthand: xl)
+@media (min-width: 1200px) { ... }
+                        </code></pre>
+                        </div>
+                        <h3>Grid</h3>
+                        <p>
+                            The bootstrap grid system uses containers, rows and columns to align content. It is built
+                            with
+                            flexbox
+                            and fully responsive. Here is an example of a simple grid layout:
+                        </p>
+                        <div class="code-highlight">
+                            <pre><code>
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-sm"&gt;
+        One of three columns
+        &lt;/div&gt;
+        &lt;div class="col-sm"&gt;
+        One of three columns
+        &lt;/div&gt;
+        &lt;div class="col-sm"&gt;
+        One of three columns
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;                      
+                        </code></pre>
+                        </div>
+                        <p>Containers help to center and horizontally pad the content. Rows wrap columns, which are the
+                            only
+                            immediate children of rows and contain the content. With column classes you can decide how
+                            many
+                            colums
+                            an element should take up out of a maximum of 12. Since column widths are set with
+                            percentages they
+                            are
+                            responsive and change relative to the container width.</p>
+                        <h4>Setting column width</h4>
+                        <p>
+                            Bootstrap will automatically set the width of grid columns if they are not specified. You
+                            can
+                            however
+                            change how many of the 12 columns a column element should take up with the
+                            <code>col-{number of columns up to 12}</code> class assigned to the column. If you only
+                            assigned it
+                            to
+                            one column element Boostrap will automatically fill up the rest of the row with the other
+                            elements.
+                        </p>
+                        <h4>Setting column widths based on breakpoints</h4>
+                        <p>A more common way to to utilize the technique described above is to combine it with bootstrap
+                            breakpoints. With the class <code>col-{breakpoint}-{number of column}</code> you can set the
+                            width
+                            of
+                            each individual column item based on the viewport (Breakpoints as described above). With
+                            <code>col-{breakpoint}-auto</code> the column will be sized based on its content.
+                        </p>
+                        <h4>Alignment of Grid</h4>
+                        <p>Alignment classes allow you to horizontally and vertically position your rows/ columns
+                            anywhere in
+                            the
+                            container:</p>
+                        <h5>Vertical alignment</h5>
+                            <ul>
+                                <li>With <code>align-items-start/center/end</code> you can vertically align rows however
+                                    you
+                                    want.
+                                </li>
+                                <li>With <code>align-self-start/center/end</code> you can vertically align columns
+                                    however you
+                                    want
+                                </li>
+                            </ul>
+                            <h5>Horizontal alignment</h5>
+                            <p> With <code>justify-content-start/center/end</code> you can horizontally align rows
+                                however you
+                                want.
+                            </p>
+                            <h4>Gutters</h4>
+                            <p>
+                                Gutters are the space between columns to space the content in the grid apart. At the
+                                start and end of row this padding is offset with negative margins to ensure that the
+                                columns are
+                                properly lined up. You can choose a value between 0 and 5 for your gutters.
+                            </p>
+                            <ul>
+                                <li>With <code>.gx-*</code> classes are used to set the horizontal gutter widths.</li>
+                                <li>With <code>.gy-*</code> classes are used to set the vertical gutter widths.</li>
+                            </ul>
+                            <p>To get rid of gutters altogether you can use the <code>.no-gutters</code> class on the row
+                                element.
+                            </p>
+
+
+                    </section>
+                    <section class="main-section" id="Content">
+                        <header class="h2 display-5">Content</header>
+                        <h3>Typography</h3>
+                        <p>Bootstrap by default uses its own standard typography, display and link styles. By adjusting
+                            the scss
+                            variables you can change these custom styles <a
+                                href="https://getbootstrap.com/docs/5.0/content/typography/">(For more information click
+                                here)</a>.
+                            Responsive typography is part of the standard styling, which adjusts the font size based on
+                            viewport
+                            size.
+                        </p>
+                        <h4>Headings and display headings</h4>
+                        <p>Headings from <code>&lt;h1&gt;-&lt;h6&gt;</code> are available as usual. Boostrap offers the
+                            option
+                            to
+                            make any element look like a heading. Just use the <code>.h1-.h6</code> class. If you need a
+                            heading
+                            that looks different and stands out you could use display headings instead. Add them with
+                            the
+                            <code>.display-1</code> through <code>.display-4</code> classes.
+                        </p>
+                        <h4>Inline text elements</h4>
+                        <p>Bootstrap adds its own style to the following inline HTML elements</p>
+                        <ul>
+                            <li><mark>mark</mark></li>
+                            <li><del>del</del></li>
+                            <li><s>s</s></li>
+                            <li><ins>ins</ins></li>
+                            <li><u>u</u></li>
+                            <li><small>small</small> (Also available as class: <code>.small</code>)</li>
+                            <li><strong>strong</strong> (Also available as class: <code>.strong</code>)</li>
+                            <li><em>em</em></li>
+                        </ul>
+                        <h4>Other text stylings</h4>
+                        <ul>
+                            <li><abbr title="Abbreviations">abbr</abbr> (Add full text with the title attribute)</li>
+                            <li>
+                                <blockquote class="blockquote d-inline-block mb-0"> Blockquotes</blockquote> (By using
+                                <code>&lt;blockquote&gt;</code>
+                                element with the <code>.blockquote</code> class). You can add a
+                                <code>&lt;footer&gt;</code> and
+                                include a <code>&lt;cite&gt;</code> element to it to add a source.
+                            </li>
+                        </ul>
+                        <h4>Lists</h4>
+                        <p>You have the option to remove the standard list-style and left margin with the
+                            <code>.list-unstyled</code> class. This only counts for the immediate children of the list.
+                        </p>
+
+                    </section>
+                    <section class="main-section" id="Components">
+                        <header class="h2 display-5">Components</header>
+                        <h3>Buttons</h3>
+                        <p>
+                            Bootstrap also offers predefined button styles that you can use with the utility class <code>.btn</code>
+                            in combination with other utility like <code>.btn-primary, .btn-secondary, .btn-success</code> and so on.
+                            These styles are also available as an outline version with the utility classes <code>.btn-outline-primary, 
+                            .btn-outline-secondary</code> etc... For more information click <a href="https://getbootstrap.com/docs/5.0/components/buttons/">here</a>.
+                        </p>
+                        <h4>Sizes</h4>
+                            <p>
+                                There are also two pre-defined button sizes that you can set with the <code>.btn-lg</code> or <code>btn-sm</code>
+                                classes.   
+                            </p>
+                        <h3>Cards</h3>
+                        <p>Cards are flexible and extensible content containers and one of the most commonly used
+                            components in
+                            Bootstrap.
+                            You can define headers, footers, a wide variety of content and powerful display options for
+                            cards.
+                            They
+                            are built with Flexbox and have no margin by default. Here is what a card structure looks
+                            like:</p>
+                        <div class="code-highlight">
+                            <pre><code>
+&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;img class="card-img-top" src=".../100px180/" alt="Card image cap"&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card
+            title and make up the bulk of the card's content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                        <h4>Content types</h4>
+                        <p>
+                            Cards support a variety of content like images, text, list groups and more. Here are some of
+                            the
+                            most
+                            important Content Types for Cards:
+                        </p>
+                        <h5>Body</h5>
+                        <p>
+                            You can use body elements by assigning the <code>.card-body</code> class to a
+                            <code>&lt;div&gt;</code>
+                            element. You will
+                            usually use this when adding padded content (like text, title, links etc.) to the card.
+                        </p>
+                        <h5>Titles, text and links</h5>
+                        These are the most common content types. You can add them to your card like this:
+                        <ul>
+                            <li>By adding <code>.card-title</code> to a <code>&lt;h*&gt;</code> element you can add a
+                                title to
+                                your
+                                card. Subtitles are added with <code>.card-subtitle</code> also used on a
+                                <code>&lt;h*&gt;</code>
+                                element.</li>
+                            <li>With <code>.card-text</code> added to a <code>&lt;p&gt;</code> element you can add text
+                                to your
+                                card
+                            </li>
+                            <li>Links are added by using <code>.card-link</code> on an <code>&lt;a&gt;</code> element
+                            </li>
+                        </ul>
+                        <h5>Images</h5>
+                        <p>
+                            With the <code>.card-img-top</code> class you can add an image to the top of the card.
+                        </p>
+                        <h5>Header, Footer</h5>
+                        <p>You can add optional headers and footers to your cards. You can add them by assigning
+                            <code>.card-header, .card-footer</code> to either <code>&lt;div&gt;</code> or
+                            <code>&lt;h*&gt;</code> to
+                            additionally style the header/ footer.
+                        </p>
+                        <h4>Sizing</h4>
+                        <p>Since cards by default don't have a defined width you can define the width with custom CSS
+                            and grid.
+                        </p>
+                        <h5>Sizing with bootstrap grid</h5>
+                        <p>By wrapping the cards in rows and columns you can utilize the Boostrap grid system to change
+                            their
+                            size.
+                        </p>
+                        <h5>Sizing with utilities</h5>
+                        <p>By using the custom sizing utilities offered by bootstrap you can quickly set a card's width.
+                            (For
+                            example
+                            by adding <code>.w75</code> to the card's <code>&lt;div&gt;</code>.</p>
+
+                        <h4>Card groups</h4>
+                        <p>Bootstrap not only offers many options to style content within cards, but also allows you to
+                            group
+                            cards
+                            together into card groups. You can start using them with the <code>.card-group</code> class
+                            within a
+                            <code>&lt;div&gt;</code> that wraps the card elements. With this your cards will all be a
+                            single
+                            attached element with equal height and width for each card. For now these layout options are
+                            not
+                            responsive yet, so use with caution. To use a card group that is not connected to one
+                            another simply
+                            use
+                            the <code>.card-deck</code> class for your card group wrapper.
+                        </p>
+                        <h3>Navbar</h3>
+                        <p>
+                            Bootstrap also comes with its own navbar styling and utilities. To start using navbars add 
+                            the <code>.navbar</code> utility class to your <code>&lt;navbar&gt;</code> element. From 
+                            there you can use one of the mutliple built in sub-components with these utility classes:
+                        </p>
+                            <ul>
+                                <li><code>.navbar-brand</code> can be applied to most elements but anchors probably work best</li>
+                                <li><code>.navbar-nav</code> for the actual navigation menu, supports dropdowns</li>
+                                <li><code>.navbar-toggler</code> intended to be with Bootstrap's collapse plugin</li>
+                                <li><code>.navbar-text</code> for vertical centering of strings</li>
+                                <li><code>.collapse.navbar-collapse</code> for grouping and hiding navbar content based on a 
+                                parent breakpoint</li>
+                                <li><code>.navbar-scroll</code> used to set a <code>max-height</code> to allow scrolling of expanded
+                                navbar content</li>
+                            </ul>
+                            <h4>Color schemes</h4>
+                            <p>
+                                To mix things up you can use a few pre-defined styles for your navbar. By using theming
+                                classes like <code>navbar-light</code> and <code>navbar-dark</code> and combining them with
+                                <code>background-color</code> utilities you can create your own navbar styling.
+                            </p>
+                            <h4>Placement</h4>
+                            <p>
+                                To fix the navbar to the top you can use <code>.fixed-top</code> which uses fixed positioning
+                                to place the navbar at the top of the viewport, removing it from the normal flow of the 
+                                document. Another option is <code>.sticky-top</code> which uses <code>position: sticky</code>
+                                to fix the navbar to the top.
+                            </p>
+                    </section>
+                    <section class="main-section" id="Utilities">
+                        <header class="h2 display-5">Utilities</header>
+                        <h3>Borders</h3>
+                        <p>Bootstrap also comes with pre-defined border utilities:</p>
+                        <ul>
+                            <li><code>.border, .border-0</code></li>
+                            <li><code>.border-top, .border-top-0</code></li>
+                            <li><code>.border-right, .border-right-0</code></li>
+                            <li><code>.border-bottom, .border-bottom-0</code></li>
+                            <li><code>.border-left, .border-left-0</code></li>
+                        </ul>
+                        <p>The classes with the 0 at the end represent the inverse of the regular border utility classes
+                            (F.e.
+                            <code>.border-top-0</code> adds a border to every side except the top). You can add a border
+                            radius
+                            with the following classes:
+                        </p>
+                        <ul>
+                            <li><code>.rounded</code></li>
+                            <li><code>.rounded-top</code></li>
+                            <li><code>.rounded-right</code></li>
+                            <li><code>.rounded-bottom</code></li>
+                            <li><code>.rounded-left</code></li>
+                            <li><code>.rounded-circle</code></li>
+                            <li><code>.rounded-0</code></li>
+                        </ul>
+
+                        <h3>Colors</h3>
+                        <p>
+                            Bootstrap offers a collection of utility classes that are meant to convey the meaning of the
+                            content
+                            through their color/ styling. Here is a list of all of them:
+                        </p>
+                        <ul>
+                            <li class="text-primary">.text-primary</li>
+                            <li class="text-secondary">.text-secondary</li>
+                            <li class="text-success">.text-success</li>
+                            <li class="text-danger">.text-danger</li>
+                            <li class="text-warning">.text-warning</li>
+                            <li class="text-info">.text-info</li>
+                            <li class="text-light bg-dark">.text-light</li>
+                            <li class="text-dark">.text-dark</li>
+                            <li class="text-body">.text-body</li>
+                            <li class="text-muted">.text-muted</li>
+                            <li class="text-white bg-dark">.text-white</li>
+                            <li class="text-black-50">.text-black-50</li>
+                            <li class="text-white-50 bg-dark">.text-white-50</li>
+                        </ul>
+                        <p>You can also use the same styles for background colors. Simply use
+                            <code>.bg-primary/secondary</code>
+                            etc... to achieve the same styles for your background.</p>
+
+                        <h3>Display</h3>
+                        <p>Boostrap comes with utility classes to add any display value to your elements like
+                            <code>flex, grid, block, none</code> etc... To add them use the following classes:
+                        </p>
+                        <ul>
+                            <li><code>.d-{value}</code></li>
+                            <li><code>.d-{breakpoint}-{value}</code></li>
+                        </ul>
+                        <p>As you can see you also have the option to set the display value different at any breakpoint.
+                            You can
+                            use this concept to hide elements at certain viewport sizes for mobile friendly web apps.
+                        </p>
+                        <h4>Flex</h4>
+                        <p>Bootstrap offers utility classes to configure your flex elements. Here is a list of the most
+                            important ones:</p>
+                        <ul>
+                            <li><code>.flex-row, flex-column, flex-{breakpoint}-row-reverse</code> etc... to set the
+                                flex
+                                direction</li>
+                            <li><code>.justify-content-start, .justify-content-center, .justify-content-{breakpoint}-end</code>
+                                etc...
+                                to
+                                set the the alignment along main axis</li>
+                            <li><code>.align-items-start, .align-items-center, align-items-{breakpoint}-end</code>
+                                etc... to
+                                align items on the secondary axis</li>
+                            <li>And many more.</li>
+                        </ul>
+                        <p>To get a full list of all available utility classes for flex in bootstrap click <a
+                                href="">here</a>
+                            to get to the official documentation.</p>
+                        <h3>Spacing</h3>
+                        <p>Bootstrap offers many options to adjust the margin/ padding of any element with shorthand
+                            classes.
+                            These
+                            classes are built from a default Sass map which range from <code>.25rem</code> to
+                            <code>3rem</code>.
+                            To
+                            apply spacing you use a standard format to define property, sides, an optional breakpoint
+                            and size:
+                        </p>
+                        <ul>
+                            <li><code>{property}{sides}-{size}</code> for <code>xs</code></li>
+                            <li><code>{property}{sides}-{breakpoint}-{size}</code> for <code>sm, md, lg</code> and
+                                <code>xl</code>
+                            </li>
+                        </ul>
+                        <p>
+                            For property you can use <code>m, p</code> which stand for margin and padding (You can also
+                            specify
+                            the side by adding it to <code>m</code> and <code>p</code> like this:
+                            <code>mt, mb, ms, me</code>).
+                            If you want to know about all the options in specific <a
+                                href="https://getbootstrap.com/docs/5.0/utilities/spacing/">here</a> is a link to the
+                            official
+                            documentation that shows you all the available options for properties, sides and sizes.
+                        </p>
+
+                        <h3>Position</h3>
+                            <p>To quickly set the positon you can use the Boostrap utility class
+                                <code>.position-{position-type}</code> (like <code>relative, absolute, fixed</code>
+                                etc...). For
+                                <code>sticky, fixed</code> you can add <code>sticky-top/ bottom</code> to quickly
+                                position your
+                                elements to the top/ bottom of the viewport.
+                            </p>
+
+                            <h3>Sizing</h3>
+                            <p>For quickly setting the height and width of elements you can use the sizing utilities:
+                            </p>
+                            <ul>
+                                <li><code>.w-25/50/75/100/auto</code> for width</li>
+                                <li><code>.h-25/50/75/100/auto</code> for height</li>
+                                <li><code>.mw-25/50/75/100/auto</code> for max-width</li>
+                                <li><code>.mh-25/50/75/100/auto</code> for max-height</li>
+                            </ul>
+
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

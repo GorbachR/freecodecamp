@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Raphael Gorbach" />
+    <meta name="description" content="Second Project of the FreeCodeCamp Course 'Responsive Web Design'">
+    <meta name="keywords" content="survey form, tooth health, freecodecamp">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/tooth.svg" type="image/x-icon">
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <header class="header-wrapper">
+        <h1 class="title" id="title">Tooth health survey for Dingle Co. employees</h1>
+        <p class="description" id="description">
+          This survey aims to collect data on the tooth health of our employees in coorperation with
+          the local research facility of the university. Thank you for participating in this survey!
+        </p>
+      </header>
+      <form class="survey-form" id="survey-form" action="post">
+
+          <div class="form-item">
+          <label for="name" id="name-label">Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your Name" required />
+          </div>
+
+          <div class="form-item">
+          <label for="email" id="email-label">Email</label>
+          <input id="email" type="email" name="email" placeholder="Enter your Email" required />
+          </div>
+
+          <div class="form-item">
+          <label for="number" id="number-label">Age (optional)</label>
+          <input id="number" type="number" name="age" min="1" max="100" placeholder="Enter your age" />
+          </div>
+
+          <div class="form-item">
+          <p>Gender</p>
+          <div class="item-options">
+            <label for="radio-gender-M">
+              <input id="radio-gender-M" name="radio-gender" type="radio" value="Male" />
+              Male
+            </label>
+
+            <label for="radio-gender-F">
+              <input id="radio-gender-F" name="radio-gender" type="radio" value="Female" />
+              Female
+            </label>
+
+            <label for="radio-gender-other">
+              <input id="radio-gender-other" name="radio-gender" type="radio" value="Other" />
+              Other
+            </label>
+          </div>
+          </div>
+
+          <div class="form-item">
+          <p>How often do you brush your teeth?</p>
+          <select id="dropdown" name="tooth-brush--count">
+            <option value="2 or more times a day">2 or more times a day</option>
+            <option value="once a day">once a day</option>
+            <option value="4-5 times a week">4-5 times a week</option>
+            <option value="1-2 times a week">1-2 times a week</option>
+            <option value="once a month or less">once a month or less</option>
+            <option value="no">no</option>
+          </select>
+          </div>
+
+          <div class="form-item">
+          <p>
+            What other measures do you take to care for your teeth?
+          </p>
+          <div class="item-options">
+            <label for="checkbox-toothcare-doctor-visit">
+              <input
+                id="checkbox-toothcare-doctor-visit"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Visit the dentist yearly"
+              />
+              Visit the dentist yearly
+            </label>
+
+            <label for="checkbox-toothcare-floss">
+              <input
+                id="checkbox-toothcare-floss"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Dental Floss"
+              />
+              Dental Floss
+            </label>
+
+            <label for="checkbox-toothcare-picks">
+              <input
+                id="checkbox-toothcare-picks"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Dental Picks and Sticks"
+              />
+              Dental Picks and Sticks
+            </label>
+
+            <label for="checkbox-toothcare-mouthwash">
+              <input
+                id="checkbox-toothcare-mouthwash"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Mouthwash"
+              />
+              Mouthwash
+            </label>
+
+            <label for="checkbox-toothcare-irrigators">
+              <input
+                id="checkbox-toothcare-irrigators"
+                name="checkbox-toothcare"
+                type="checkbox"
+                value="Oral irrigators"
+              />
+              Oral irrigators
+            </label>
+
+          </div>
+        </div>
+
+          <div class="form-item">
+          <p>Did you have any complication with your teeth in the last 6 months?</p>
+          <textarea id="form_textarea" name="tooth-complications" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="form-item submit-wrapper">
+          <input class="submit-button" id="submit" type="submit" value="Send" />
+          </div>
+        
+      </form>
+    </div>
+  </body>
+</html>

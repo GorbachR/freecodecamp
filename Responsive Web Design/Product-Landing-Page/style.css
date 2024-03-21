@@ -1,0 +1,419 @@
+:root {
+  --footer-text-color: hsl(215, 14%, 34%);
+  --white-text: white;
+  --main-color: #324e7b;
+  --padding-left-right: 0.8rem;
+  --pricing-table-border-radius: 10px;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+    /*Debugging */
+  /*outline: 1px solid red; */
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.06rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.main-wrapper {
+  grid-template-columns: 100%;
+}
+
+.header {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 25%);
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  /*Needed to use this to pass the challenge, would have used sticky*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-img {
+  display: block;
+  height: auto;
+  max-width: 400px;
+  min-width: 150px;
+  padding: 0 var(--padding-left-right);
+  width: 100%;
+}
+
+.nav-bar {
+  width: 50%;
+}
+
+.nav-items {
+  align-items: center;
+  color: #6b7280;
+  display: flex;
+  font-weight: bolder;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+a.nav-link:link {
+  color: #6b7280;
+  text-decoration: inherit;
+}
+
+a.nav-link:visited {
+  color: #6b7280;
+}
+
+a.nav-link:hover {
+  color: #9ca3af;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.main-content > * {
+  margin-bottom: 75px;
+}
+
+.img-top {
+  align-items: center;
+  background-blend-mode: darken;
+  background-color: #0008;
+  background-image: url(./img/fitness-375472_1920.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 550px;
+  padding: 10px var(--padding-left-right);
+  width: 100%;
+}
+
+.img-top__text-wrapper {
+  /*For some reason there is always excess space on the right side of the div unless I center it, annoying! */
+  max-width: 600px;
+  text-align: start;
+}
+
+.img-top p, h1 {
+  color: var(--white-text);
+  word-break: break-word;
+}
+
+.img-top h1 {
+  margin-bottom: 10px;
+}
+
+.introduction {
+  margin: inherit auto;
+  padding: 0 var(--padding-left-right);
+  text-align: center;
+  word-break: break-word;
+}
+
+.introduction__text-styling {
+  color: var(--main-color);
+}
+
+.introduction h2 {
+  font-size: 2.5rem;
+}
+
+.introduction p {
+  margin: 20px;
+  max-width: 55ch;
+}
+
+.three-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: var(--padding-left-right);
+  width: 100%;
+}
+
+.three-points__wrappers {
+  max-width: 20ch;
+  text-align: center;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.three-points__wrappers:hover {
+  scale: 1.05;
+}
+
+.three-points__wrappers h3 {
+  font-size: 1.4rem;
+}
+
+.three-points p {
+  margin-top: 5px;
+  
+}
+
+.three-points__images {
+  display: block;
+  height: auto;
+  margin: 1.5rem auto 1rem auto;
+  max-width: 70px;
+  width: 100%;
+}
+
+.video-wrapper {
+  max-width: 560px;
+  position: relative;
+  width: 100%;
+}
+
+.video-wrapper::before {
+  content: '';
+  /*Equals 16:9 */
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  height: 100%;
+  left: 0;
+  padding: 0 var(--padding-left-right);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.price-table-wrapper {
+  max-width: 100%;
+  /*Awful solution for issue at hand, shows limitations of table elements*/
+  overflow-x: auto;
+  padding: 0 var(--padding-left-right);
+}
+
+.price-table {
+  border-spacing: 0;
+  font-size: 1rem;
+  letter-spacing: normal;
+  width: 100%;
+}
+
+.price-table thead, .price-table__price {
+  font-size: 1.4rem;
+}
+
+.price-table td, th {
+  border: lightgray solid 1px;
+  max-width: 150px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.price-table td img {
+  background-repeat: no-repeat;
+  display: block;
+  height:0px;
+  margin-left: auto;
+  margin-right: auto;
+  width:0px;
+}
+
+.price-table thead th, .price-table__btn {
+  background-color: var(--main-color);
+  color: var(--white-text);
+}
+
+.price-table tbody tr:nth-child(odd) td {
+  background-color: #e4e4e7;
+}
+
+.price-table tbody tr:nth-child(even) td {
+  background-color: white;
+}
+
+.price-table__btn {
+  border: var(--main-color) solid 1px;
+  border-radius: 7px;
+  box-shadow: 3px 3px 2px #a8a29e;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 0.4rem;
+}
+
+.price-table__btn:hover {
+  background-color: rgba(50, 78, 123, 0.9);
+  cursor: pointer;
+}
+
+.price-table__btn:focus {
+  background-color: rgba(50, 78, 123, 0.9);
+}
+
+/*Sets the border radius of table*/
+.price-table tr:first-child th:first-child{
+  border-top-left-radius: var(--pricing-table-border-radius);
+}
+
+.price-table tr:last-child td:first-child{
+  border-bottom-left-radius: var(--pricing-table-border-radius);
+}
+
+.price-table tr:first-child th:last-child{
+  border-top-right-radius: var(--pricing-table-border-radius);
+}
+
+.price-table tr:last-child td:last-child{
+  border-bottom-right-radius: var(--pricing-table-border-radius);
+}
+/**/
+
+.checkmark {
+  background-image: url("./img/checkmark.svg");
+  padding: 20px 20px 20px 20px;
+}
+
+.crossout {
+  background-image: url("./img/crossout.svg");
+  padding: 15px 20px 20px 15px;
+}
+
+.footer {
+  background-color: #eee;
+  display: grid;
+  font-size: 0.8rem;
+  grid-area: footer;
+  grid-template-rows: repeat(auto-fit, 50%);
+  height: 350px;
+  margin-bottom: 0 !important;
+  padding: 0 var(--padding-left-right);
+}
+
+.footer-newsletter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: normal;
+}
+
+.footer-newsletter p {
+  font-size: 1.5em;
+}
+
+.footer-form__email-input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--footer-text-color);
+  font-size: inherit;
+  max-width: 160px;
+  padding: 0.6em 0.4em;
+  width: 100%;
+}
+
+.footer-form__submit {
+  background-color: none;
+  cursor: pointer;
+  font-size: inherit;
+  margin-left: 1em;
+  margin-top: 10px;
+  padding: 1em;
+}
+
+.footer-links {
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+a.footer-link:link {
+  color: var(--footer-text-color);
+  text-decoration: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a.footer-link:visited {
+  color: var(--footer-text-color);
+}
+
+a.footer-link:hover {
+  color: hsl(218, 11%, 65%);
+}
+
+.footer-links p {
+  font-size: 0.6rem;
+  padding-top: 5px;
+}
+
+@media (min-width: 0px) {
+    body {
+      font-size: 1rem;
+    }
+  }
+  
+@media (min-width: 400px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  html {
+    scroll-padding-top: 170px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    height: 162px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .header-img {
+    justify-self: left;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .nav-items > * {
+    padding-bottom: 10px;
+  }
+
+  .main-content {
+    margin-top: 162px;
+  }
+}
+
+@media (min-width: 1001px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+}

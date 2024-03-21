@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Raphael Gorbach" />
+    <meta name="description" content="Third Project of the FreeCodeCamp Course 'Responsive Web Design'">
+    <meta name="keywords" content="landing page, fitness, freecodecamp">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/icon.svg" type="image/x-icon">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header class="header" id="header">
+            <a href="">
+            <img class="header-img" id="header-img" src="./img/logo.svg" alt="HeaderLogo">
+            </a>
+            <nav class="nav-bar" id="nav-bar">
+                <ul class="nav-items">
+                    <li>
+                        <a class="nav-link" href="#threepoints">Our values</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#video">Video</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#pricetable">Prices</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+    <div class="main-content">
+        <div class="img-top">
+            <div class="img-top__text-wrapper">
+                <h1>Get started now on the Gorbach Fitness Training Plan!</h1>
+                <p>✓ Reach the natural limit of your physique</p>
+                <p>✓ Receive a custom workout plan just for you </p>
+                <p>✓ Exclusive Access to Workout Videos </p>
+            </div>
+        </div>
+        <div class="introduction">
+            <h2>Subscription based <div class="introduction__text-styling">fitness service made in Austria</div></h2>
+            <p>Our mission is to make fitness available for everyone. With Gorbach Fitness you will have an easy access
+               to all the resources for getting started on your fitness journey! </p>
+        </div>
+            <div class="three-points" id="threepoints">
+            <div class="three-points__wrappers">
+                <img class="three-points__images" src="./img/recognition-badge-svgrepo-com.svg" alt="" />
+                <h3>Made by trained professionals</h3>
+                <p>
+                The people drafting your plan have years of experience as personal trainers and physical therapists. You
+                will always receive a plan tailored to your requirments and limitations!
+                </p>
+            </div>
+            <div class="three-points__wrappers">
+                <img class="three-points__images" src="./img/thumb-up-filled-gesture-svgrepo-com.svg" alt="" />
+                <h3>100% Customer satisfaction</h3>
+                <p>
+                We have helped countless customers reach their dream pysique. Check out the testimonies of our
+                customers on our website!
+                </p>
+            </div>
+            <div class="three-points__wrappers">
+                <img class="three-points__images" src="./img/dollar-money-protection-svgrepo-com.svg" alt="" />
+                <h3>60-Day Money Back Gurantee</h3>
+                    <p>
+                    If you are not satisfied with our service you can cancel your
+                    subscription at any point and get your money back
+                    within 60 days! 
+                    </p>
+            </div>
+            </div>
+
+        <div class="video-wrapper">
+            <iframe class="video" id="video" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Rick Astley - Never Gonna Give You Up (Official Music Video)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        </div>
+    <div class="price-table-wrapper">
+    <table class="price-table" id="pricetable">
+        <thead>
+            <tr>
+                <th>Features</th>
+                <th>Basic Package</th>
+                <th>Medium Package</th>
+                <th>Advanced Package</th>
+            </tr>
+        </thead>
+        <tbody class="price-body">
+            <tr>
+                <td>Personal workout plan</td>
+                <td data-label="Personal Workout Plan"><img class="checkmark" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+            </tr>
+            <tr>
+                <td>Exclusive Workout Videos</td>
+                <td><img class="checkmark" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+            </tr>
+            <tr>
+                <td>Over Text Communication</td>
+                <td><img class="crossout" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+            </tr>
+            <tr>
+                <td>Dietary plan</td>
+                <td><img class="crossout" alt=""></td>
+                <td><img class="crossout" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+            </tr>
+            <tr>
+                <td>Virtual Coaching</td>
+                <td><img class="crossout" alt=""></td>
+                <td><img class="crossout" alt=""></td>
+                <td><img class="checkmark" alt=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p><div class="price-table__price">10€</div> per month</p>
+                    <form action="#"><button class="price-table__btn" type="submit" >Subscribe Now</button></form>
+                </td>
+                <td>
+                    <p><div class="price-table__price">20€</div> per month</p>
+                    <form action="#"><button class="price-table__btn" type="submit" >Subscribe Now</button></form>
+                </td>
+                <td>
+                    <p><div class="price-table__price">30€</div> per month</p>
+                    <form action="#"><button class="price-table__btn" type="submit" >Subscribe Now</button></form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <p class="footer-newsletter__label" for="form"> Sign up for our Newsletter:</p>
+                <form class="footer-form" id="form" action="https://www.freecodecamp.com/email-submit" target="https://www.freecodecamp.com/email-submit">
+                    <input class="footer-form__email-input" id="email" name="email" type="email" placeholder="Enter Email" />
+                    <input class="footer-form__submit" id="submit" type="submit" value="Subscribe" />
+                </form>
+        </div>
+
+        <div class="footer-links">
+        <a class="footer-link" href="">Privacy</a>
+        <a class="footer-link" href="">Terms</a>
+        <a class="footer-link" href="">Contact</a>
+        <p>© 2022, Gorbach Fitness</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
