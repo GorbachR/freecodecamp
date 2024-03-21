@@ -1,0 +1,19 @@
+@import "./scss/variables";
+@import "./scss/forms/themebutton";
+@import "./scss/utilities/sizing";
+@import "~bootstrap/scss/bootstrap";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
